@@ -55,7 +55,7 @@ function App() {
     setSelectedMood(mood);
     try {
       const res = await axios.get<Recommendation[]>(
-        `https://your-backend-api.com/recommend?mood=${mood}`
+        `https://mood2music.onrender.com/recommend?mood=${mood}`
       );
       setRecommendations(res.data);
     } catch (err) {
@@ -84,7 +84,7 @@ function App() {
             <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Mood to Music
             </h1>
-            <a id="bolt-button" href="https://bolt.new" target="_blank" title="Powered By Bolt"></a>
+            {showMoodSelection && <a id="bolt-button" href="https://bolt.new" target="_blank" title="Powered By Bolt"></a>}
           </div>
           {showMoodSelection && (
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
