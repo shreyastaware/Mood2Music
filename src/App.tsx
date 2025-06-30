@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Music, ExternalLink, Loader2, ArrowLeft } from 'lucide-react';
 
 interface MusicRecommendation {
@@ -203,6 +203,7 @@ function App() {
             <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Mood to Music
             </h1>
+            <a id="bolt-button" href="https://bolt.new" target="_blank" title="Powered By Bolt"></a>
           </div>
           {showMoodSelection && (
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -331,7 +332,7 @@ function App() {
       {/* Footer */}
       <footer className="w-full py-8 bg-gray-900 text-center">
         <p className="text-gray-400">
-          © 2025 Mood to Music. Made with ❤️ for music lovers everywhere.
+          © 2025 Mood to Music. Made with ❤️ for music lovers everywhere by <a href="https://www.x.com/SangramTaware06" target="_blank">Sangram</a> & <a href="https://twitter.com/indiehackingguy" target="_blank">Shreyas</a>.
         </p>
       </footer>
     </div>
