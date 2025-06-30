@@ -55,37 +55,44 @@ def get_spotify_recommendations(filters):
         raise HTTPException(status_code=500, detail="Spotify API error")
 
     data = response.json()
-    tracks = [
-        f"https://open.spotify.com/track/{track['id']}"
-        for track in data.get('tracks', [])
-    ]
+
+    tracks = []
+    for item in data.get("tracks", {}).get("items", []):
+        title = item["name"]
+        artist = item["artists"][0]["name"]
+        spotify_url = item["external_urls"]["spotify"]
+        tracks.append({
+            "title": title,
+            "artist": artist,
+            "spotifyUrl": spotify_url
+        })
+
     return tracks
 
 # YouTube Search
-def search_youtube(query):
+def search_youtube_link(title: str, artist: str):
+    query = f"{title} {artist} music"
     api_key = os.getenv("YOUTUBE_API_KEY")
-    url = "https://youtube.googleapis.com/youtube/v3/search"
-
-    params = {
-        'part': 'snippet',
-        'maxResults': 5,
-        'q': query,
-        'key': api_key,
-        'type': 'video'
-    }
-
-    response = requests.get(url, params=params)
+    response = requests.get(
+        "https://www.googleapis.com/youtube/v3/search",
+        params={
+            "part": "snippet",
+            "q": query,
+            "key": api_key,
+            "maxResults": 1,
+            "type": "video"
+        }
+    )
 
     if response.status_code != 200:
         raise HTTPException(status_code=500, detail="YouTube API error")
 
     data = response.json()
 
-    links = [
-        f"https://www.youtube.com/watch?v={item['id']['videoId']}"
-        for item in data.get('items', [])
-    ]
-    return links
+    items = data.json().get("items", [])
+    if items:
+        return f"https://www.youtube.com/watch?v={items[0]['id']['videoId']}"
+    return ""
 
 # API Route
 @app.get("/recommend")
@@ -97,13 +104,8 @@ def recommend(mood: str):
     mood_data = mood_map[mood]
 
     spotify_filters = mood_data.get("spotify_filters", {})
-    youtube_query = mood_data.get("youtube_query", mood)
+    tracks = get_spotify_recommendations(spotify_filters)
+    for track in tracks:
+        track["youtubeUrl"] = search_youtube_link(track["title"], track["artist"])
 
-    spotify_links = get_spotify_recommendations(spotify_filters)
-    youtube_links = search_youtube(youtube_query)
-
-    return {
-        "mood": mood,
-        "spotify": spotify_links,
-        "youtube": youtube_links
-    }
+    return tracks
