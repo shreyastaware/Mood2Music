@@ -12,7 +12,7 @@ app = FastAPI()
 # Allow CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://mood-2-music.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
