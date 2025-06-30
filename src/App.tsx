@@ -203,6 +203,7 @@ function App() {
             <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Mood to Music
             </h1>
+            <a id="bolt-button" href="https://bolt.new" target="_blank" title="Powered By Bolt"></a>
           </div>
           {showMoodSelection && (
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">

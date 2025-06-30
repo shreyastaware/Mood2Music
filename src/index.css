@@ -7,6 +7,20 @@
   font-family: 'Nunito', sans-serif;
 }
 
+#bolt-button {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url(bolt_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: opacity 300ms;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
