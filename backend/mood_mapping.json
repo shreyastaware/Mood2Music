@@ -1,0 +1,98 @@
+{
+"happy": {
+"spotify_filters": { "target_valence": 0.95, "target_energy": 0.8, "target_tempo": 120 },
+"youtube_query": "happy uplifting music playlist"
+},
+"sad": {
+"spotify_filters": { "target_valence": 0.2, "target_energy": 0.3, "target_tempo": 70 },
+"youtube_query": "sad emotional songs playlist"
+},
+"energetic": {
+"spotify_filters": { "target_valence": 0.8, "target_energy": 0.95, "target_tempo": 140 },
+"youtube_query": "high energy workout music playlist"
+},
+"relaxed": {
+"spotify_filters": { "target_valence": 0.6, "target_energy": 0.3, "target_tempo": 80, "target_acousticness": 0.7 },
+"youtube_query": "relaxing background music playlist"
+},
+"focused": {
+"spotify_filters": { "target_valence": 0.5, "target_energy": 0.4, "target_tempo": 90, "target_instrumentalness": 0.8 },
+"youtube_query": "focus music instrumental playlist"
+},
+"calm": {
+"spotify_filters": { "target_valence": 0.7, "target_energy": 0.3, "target_tempo": 75, "target_acousticness": 0.8 },
+"youtube_query": "calming ambient music"
+},
+"angry": {
+"spotify_filters": { "target_valence": 0.3, "target_energy": 0.95, "target_tempo": 150 },
+"youtube_query": "angry rock metal playlist"
+},
+"romantic": {
+"spotify_filters": { "target_valence": 0.85, "target_energy": 0.5, "target_tempo": 90 },
+"youtube_query": "romantic love songs playlist"
+},
+"cheerful": {
+"spotify_filters": { "target_valence": 0.95, "target_energy": 0.7, "target_tempo": 115 },
+"youtube_query": "feel good cheerful music"
+},
+"reflective": {
+"spotify_filters": { "target_valence": 0.5, "target_energy": 0.4, "target_tempo": 85 },
+"youtube_query": "reflective instrumental background music"
+},
+"gloomy": {
+"spotify_filters": { "target_valence": 0.2, "target_energy": 0.3, "target_tempo": 65 },
+"youtube_query": "gloomy sad cinematic music"
+},
+"humorous": {
+"spotify_filters": { "target_valence": 0.9, "target_energy": 0.6, "target_tempo": 110 },
+"youtube_query": "funny comedy parody music"
+},
+"melancholy": {
+"spotify_filters": { "target_valence": 0.25, "target_energy": 0.35, "target_tempo": 70 },
+"youtube_query": "melancholy slow music"
+},
+"idyllic": {
+"spotify_filters": { "target_valence": 0.85, "target_energy": 0.45, "target_acousticness": 0.6 },
+"youtube_query": "dreamy idyllic music"
+},
+"chill": {
+"spotify_filters": { "target_valence": 0.75, "target_energy": 0.3, "target_tempo": 80 },
+"youtube_query": "chill beats lo-fi playlist"
+},
+"weird": {
+"spotify_filters": { "target_valence": 0.6, "target_energy": 0.7, "target_danceability": 0.5 },
+"youtube_query": "weird experimental music"
+},
+"horny": {
+"spotify_filters": { "target_valence": 0.85, "target_energy": 0.5, "target_danceability": 0.9 },
+"youtube_query": "sexy rnb slow jam playlist"
+},
+"sleepy": {
+"spotify_filters": { "target_valence": 0.4, "target_energy": 0.2, "target_tempo": 60 },
+"youtube_query": "sleep music ambient"
+},
+"fearful": {
+"spotify_filters": { "target_valence": 0.2, "target_energy": 0.6, "target_tempo": 80 },
+"youtube_query": "dark cinematic suspenseful music"
+},
+"lonely": {
+"spotify_filters": { "target_valence": 0.2, "target_energy": 0.3, "target_acousticness": 0.7 },
+"youtube_query": "lonely emotional acoustic songs"
+},
+"tense": {
+"spotify_filters": { "target_valence": 0.3, "target_energy": 0.9, "target_tempo": 130 },
+"youtube_query": "tense cinematic trailer music"
+},
+"thoughtful": {
+"spotify_filters": { "target_valence": 0.6, "target_energy": 0.4, "target_instrumentalness": 0.9 },
+"youtube_query": "thoughtful ambient piano music"
+},
+"thrill-seeking": {
+"spotify_filters": { "target_valence": 0.8, "target_energy": 0.95, "target_tempo": 145 },
+"youtube_query": "thrilling action epic music"
+},
+"playful": {
+"spotify_filters": { "target_valence": 0.9, "target_energy": 0.7, "target_tempo": 120 },
+"youtube_query": "playful fun quirky music"
+}
+}
